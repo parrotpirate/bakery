@@ -1,0 +1,36 @@
+/* Responsive mixins */
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+/* Font mixins */
+@mixin name-font {
+    font-family: 'Montez', cursive;
+}
+
+@mixin title-font {
+    font-family: 'Yeseva One', cursive;
+}
+
+@mixin nav-font {
+    font-family: 'Merriweather', serif;
+}
+
+@mixin text-font {
+    font-family: 'Mandali', sans-serif;
+}
+
+/* Vertical Align */
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}

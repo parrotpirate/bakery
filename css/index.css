@@ -1,0 +1,423 @@
+/* Responsive width variables */
+/* Responsive mixins */
+/* Font mixins */
+/* Vertical Align */
+#navbar {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  min-width: 1024px;
+  width: 100%;
+  height: 100px;
+  padding: 0 5%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#navbar #name {
+  font-family: 'Montez', cursive;
+  font-size: 60px;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  left: 5%;
+  top: 0;
+  height: 100%;
+}
+
+#navbar #name a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#navbar #name a:hover {
+  text-shadow: 3px 3px 20px lightyellow, -3px -3px 20px lightyellow;
+}
+
+#navbar #nav-menu {
+  position: absolute;
+  left: 1%;
+  right: 1%;
+  margin: 0 auto;
+  width: 61%;
+  height: 100%;
+}
+
+#navbar #nav-menu li {
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  width: 15.38462%;
+}
+
+#navbar #nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  display: block;
+  height: 100%;
+  padding-top: 2.8em;
+  -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+  font-weight: 900;
+  font-family: 'Merriweather', serif;
+}
+
+#navbar #nav-menu li a:hover {
+  background-color: rgba(255, 255, 224, 0.3);
+}
+
+#navbar #social-icons {
+  position: absolute;
+  height: 100%;
+  right: 5%;
+  top: 0;
+  display: inline-block;
+}
+
+#navbar #social-icons #icon-container {
+  width: 100%;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  position: relative;
+  padding: 7px 10px;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#navbar #social-icons #icon-container a {
+  color: white;
+  text-decoration: none;
+  font-size: 35px;
+  padding: 3px 10px;
+}
+
+#navbar #social-icons #icon-container a:hover > i {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#navbar #social-icons #icon-container a:hover:first-child > i {
+  color: #28A9E0;
+}
+
+#navbar #social-icons #icon-container a:hover:nth-child(2) > i {
+  color: #4A6EA9;
+}
+
+#navbar #social-icons #icon-container a:hover:last-child > i {
+  color: #D3C4A5;
+}
+
+#navbar #social-icons #icon-container a i {
+  -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+
+#hero {
+  width: 100%;
+  min-width: 1024px;
+  min-height: 810px;
+  height: 100vh;
+  background: url(../resources/images/variousbreads.jpg);
+  background-size: cover;
+  box-shadow: 3px 3px 15px black;
+  margin-bottom: 3px;
+}
+
+#hero #hero-title {
+  font-size: 110px;
+  position: relative;
+  padding-top: 15%;
+  padding-bottom: 40px;
+  text-align: center;
+  color: white;
+  font-family: 'Yeseva One', cursive;
+}
+
+#hero #hero-title:after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 20%;
+  height: 2px;
+  margin: 0 auto;
+  content: '';
+  background-color: rgba(255, 255, 224, 0.6);
+}
+
+#hero #hero-text {
+  font-size: 18px;
+  line-height: 30px;
+  width: 40%;
+  margin: 50px auto 70px;
+  color: white;
+  font-family: 'Mandali', sans-serif;
+}
+
+#hero #hero-button {
+  width: 295px;
+  height: 75px;
+  margin: 0 auto;
+  -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+  border: 1px solid rgba(255, 255, 224, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#hero #hero-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+#hero #hero-button:hover > a {
+  color: lightyellow;
+}
+
+#hero #hero-button a {
+  font-size: 30px;
+  font-weight: 500;
+  display: block;
+  height: 100%;
+  padding-top: 20px;
+  -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+#art {
+  width: 100%;
+  min-width: 1024px;
+  padding: 75px;
+  height: 880px;
+  background: url(../resources/images/canvas.jpg);
+  /* End .left */
+  /* End .right */
+}
+
+#art .left {
+  height: 100%;
+  width: 50%;
+  float: left;
+  /* End .title.wrapper */
+  /* End .text.wrapper */
+  /* End .text.wrapper */
+  /* End .chef.wrapper */
+  /* End .quote.wrapper */
+}
+
+#art .left .title.wrapper {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#art .left .title.wrapper h3 {
+  font-size: 5.5em;
+  margin-bottom: 1%;
+  font-family: 'Yeseva One', cursive;
+}
+
+#art .left .title.wrapper p {
+  font-size: 1.3em;
+  font-weight: 900;
+  color: #b26b3d;
+  font-family: 'Merriweather', serif;
+}
+
+#art .left .text.wrapper, #art .left .chef.wrapper, #art .left .quote.wrapper {
+  width: 75%;
+  margin: 7% auto 0;
+  text-align: center;
+}
+
+#art .left .text.wrapper p, #art .left .chef.wrapper p, #art .left .quote.wrapper p {
+  font-size: 1.1em;
+  line-height: 2em;
+  font-family: 'Mandali', sans-serif;
+}
+
+#art .left .chef.wrapper {
+  /* End .img.wrapper */
+}
+
+#art .left .chef.wrapper p:first-child {
+  font-size: 1.6em;
+  margin-bottom: 1%;
+  font-family: 'Yeseva One', cursive;
+}
+
+#art .left .chef.wrapper p:nth-child(2),
+#art .left .chef.wrapper p:last-child {
+  font-family: flamenco, serif;
+  font-size: 1.4em;
+  display: inline-block;
+  padding: 2px 10px;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+
+#art .left .chef.wrapper .img.wrapper {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  margin: 0 10px;
+  padding: 5px;
+  text-align: center;
+  vertical-align: middle;
+  border: 5px solid #e4d0b8;
+  border-radius: 100%;
+}
+
+#art .left .chef.wrapper .img.wrapper img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+#art .left .quote.wrapper {
+  width: 47%;
+  min-width: 235px;
+  text-align: center;
+}
+
+#art .left .quote.wrapper p {
+  font-family: flamenco, serif;
+  font-size: 1.8em;
+  font-weight: 700;
+  font-style: italic;
+  color: #B3693A;
+  line-height: 1em;
+}
+
+#art .left .quote.wrapper .fa {
+  color: lightgray;
+}
+
+#art .left .quote.wrapper .fa-quote-left {
+  text-align: left;
+  display: block;
+  margin-bottom: 1%;
+}
+
+#art .left .quote.wrapper .fa-quote-right {
+  display: block;
+  text-align: right;
+}
+
+#art .right {
+  height: 100%;
+  width: 50%;
+  float: right;
+  /* End #art_picture_frame */
+}
+
+#art .right #art_picture_frame {
+  /* White panel for images */
+  position: relative;
+  width: 100%;
+  max-width: 750px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: white;
+  box-shadow: -1px 1px 10px black;
+  margin: 0 auto;
+  /* End .frame_content */
+}
+
+#art .right #art_picture_frame:before {
+  /* Keeps 1:1 aspect ratio */
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+#art .right #art_picture_frame .frame_content {
+  /* Keeps picture grid at 1:1 aspect ratio */
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 3%;
+  /* End .photo */
+  /* End .taste */
+}
+
+#art .right #art_picture_frame .frame_content .photo {
+  /* Picture grid */
+  height: 50%;
+  width: 50%;
+  float: left;
+  position: relative;
+}
+
+#art .right #art_picture_frame .frame_content .photo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#art .right #art_picture_frame .frame_content .taste {
+  height: 50%;
+  width: 50%;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  background: url(../resources/images/slate.jpg);
+  text-align: center;
+  padding: 2%;
+  /* End .border */
+}
+
+#art .right #art_picture_frame .frame_content .taste .border {
+  /* Div for inset border */
+  height: 100%;
+  width: 100%;
+  border: 1px solid white;
+  padding: 3%;
+}
+
+#art .right #art_picture_frame .frame_content .taste .border p {
+  color: white;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 3.5vw;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+/* End #art */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix {
+  clear: both;
+}

@@ -1,0 +1,72 @@
+#hero {
+    width: 100%;
+    min-width: 1024px;
+    min-height: 810px;
+    height: 100vh;
+    background: url(../resources/images/variousbreads.jpg);
+    background-size: cover;
+    box-shadow: 3px 3px 15px black;
+    margin-bottom: 3px;
+
+    #hero-title {
+        font-size: 110px;
+        position: relative;
+        padding-top: 15%;
+        padding-bottom: 40px;
+        text-align: center;
+        color: white;
+
+        @include title-font;
+
+        &:after {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 20%;
+            height: 2px;
+            margin: 0 auto;
+            content: '';
+            background-color: fade-out(lightyellow, 0.4);
+        }
+    }
+
+    #hero-text {
+        font-size: 18px;
+        line-height: 30px;
+        width: 40%;
+        margin: 50px auto 70px;
+        color: white;
+
+        @include text-font;
+    }
+
+    #hero-button {
+        width: 295px;
+        height: 75px;
+        margin: 0 auto;
+        transition: all .5s ease-in-out;
+        border: 1px solid fade-out(lightyellow, 0.4);
+        background-color: fade-out(black, 0.4);
+
+        &:hover {
+            background-color: fade-out(black, 0.1);
+        }
+
+        &:hover > a {
+            color: lightyellow;
+        }
+
+        a {
+            font-size: 30px;
+            font-weight: 500;
+            display: block;
+            height: 100%;
+            padding-top: 20px;
+            transition: all .5s ease-in-out;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+        }
+    }
+}

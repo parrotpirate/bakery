@@ -1,0 +1,19 @@
+@import "../partials/_variables";
+@import "../partials/_mixins";
+@import "../partials/_navbar";
+@import "../partials/_hero";
+@import "../partials/_artofcakes";
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix {
+    clear: both;
+}

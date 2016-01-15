@@ -1,0 +1,222 @@
+#art {
+    width: 100%;
+    min-width: 1024px;
+    padding: 75px;
+    height: 880px;
+    background: url(../resources/images/canvas.jpg);
+
+    .left {
+        height: 100%;
+        width: 50%;
+        float: left;
+
+        .title.wrapper {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+
+            h3 {
+                font-size: 5.5em;
+                margin-bottom: 1%;
+
+                @include title-font;
+            }
+
+            p {
+                font-size: 1.3em;
+                font-weight: 900;
+                color: #b26b3d;
+
+                @include nav-font;
+            }
+        }
+
+        /* End .title.wrapper */
+        .text.wrapper {
+            width: 75%;
+            margin: 7% auto 0;
+            text-align: center;
+
+            p {
+                font-size: 1.1em;
+                line-height: 2em;
+
+                @include text-font;
+            }
+        }
+
+        /* End .text.wrapper */
+
+        /* End .text.wrapper */
+        .chef.wrapper {
+            @extend .text.wrapper;
+
+            p:first-child {
+                font-size: 1.6em;
+                margin-bottom: 1%;
+
+                @include title-font;
+            }
+
+            p:nth-child(2),
+            p:last-child {
+                font-family: flamenco, serif;
+                font-size: 1.4em;
+                display: inline-block;
+                padding: 2px 10px;
+                border-top: 1px solid gray;
+                border-bottom: 1px solid gray;
+            }
+
+            .img.wrapper {
+                position: relative;
+                display: inline-block;
+                width: 120px;
+                height: 120px;
+                margin: 0 10px;
+                padding: 5px;
+                text-align: center;
+                vertical-align: middle;
+                border: 5px solid #e4d0b8;
+                border-radius: 100%;
+
+                img {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            /* End .img.wrapper */
+        }
+
+        /* End .chef.wrapper */
+
+        .quote.wrapper {
+            @extend .text.wrapper;
+
+            width: 47%;
+            min-width: 235px;
+            text-align: center;
+
+            p {
+                font-family: flamenco, serif;
+                font-size: 1.8em;
+                font-weight: 700;
+                font-style: italic;
+                color: #B3693A;
+                line-height: 1em;
+            }
+
+            .fa {
+                color: lightgray;
+            }
+
+            .fa-quote-left {
+                text-align: left;
+                display: block;
+                margin-bottom: 1%;
+            }
+
+            .fa-quote-right {
+                display: block;
+                text-align: right;
+            }
+        }
+
+        /* End .quote.wrapper */
+    }
+
+    /* End .left */
+
+    .right {
+        height: 100%;
+        width: 50%;
+        float: right;
+
+        #art_picture_frame {
+            /* White panel for images */
+            position: relative;
+            width: 100%;
+            max-width: 750px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: white;
+            box-shadow: -1px 1px 10px black;
+            margin: 0 auto;
+
+            &:before {
+                /* Keeps 1:1 aspect ratio */
+                content: "";
+                display: block;
+                padding-top: 100%;
+            }
+
+            .frame_content {
+                /* Keeps picture grid at 1:1 aspect ratio */
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                padding: 3%;
+
+                .photo {
+                    /* Picture grid */
+                    height: 50%;
+                    width: 50%;
+                    float: left;
+                    position: relative;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                /* End .photo */
+
+                .taste {
+                    height: 50%;
+                    width: 50%;
+                    position: absolute;
+                    top: 25%;
+                    left: 25%;
+                    background: url(../resources/images/slate.jpg);
+                    text-align: center;
+                    padding: 2%;
+
+                    .border {
+                        /* Div for inset border */
+                        height: 100%;
+                        width: 100%;
+                        border: 1px solid white;
+                        padding: 3%;
+
+                        p {
+                            color: white;
+                            font-family: 'Fredericka the Great', cursive;
+                            font-size: 3.5vw;
+
+                            @include vertical-align;
+                        }
+                    }
+
+                    /* End .border */
+                }
+
+                /* End .taste */
+            }
+
+            /* End .frame_content */
+        }
+
+        /* End #art_picture_frame */
+    }
+
+    /* End .right */
+}
+
+/* End #art */
