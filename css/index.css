@@ -421,3 +421,64 @@ html, body {
 .clearfix {
   clear: both;
 }
+
+#recipes {
+  width: 100%;
+  min-width: 1024px;
+  height: 880px;
+  background: url(../resources/images/food-kitchen-cutting-board-cooking.jpg);
+  background-size: cover;
+  background-position: 0% 50%;
+  padding: 100px;
+}
+
+#recipes .recipe_card {
+  height: 100%;
+  width: 80%;
+  background-color: white;
+  position: relative;
+  box-shadow: 13px 13px 10px black;
+}
+
+#recipes .recipe_card .recipe_image {
+  height: 100%;
+  width: 45%;
+  float: left;
+}
+
+#recipes .recipe_card .recipe_image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#recipes .recipe_card .recipe {
+  height: 70%;
+  width: 55%;
+  float: right;
+  background: url(../resources/images/house_sketch.gif) no-repeat;
+  background-position: 125% 125%;
+  padding: 5%;
+}
+
+#recipes .recipe_card .recipe .recipe_title h3 {
+  font-family: 'Yeseva One', cursive;
+}
+
+#recipes .recipe_card .recipe .recipe_title p {
+  font-family: 'Merriweather', serif;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+#recipes .recipe_card .recipe .recipe_summary p {
+  font-family: 'Mandali', sans-serif;
+}
+
+#recipes .recipe_card .recipe_selector {
+  height: 30%;
+  width: 55%;
+  float: right;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../resources/images/canvas.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../resources/images/canvas.jpg);
+}

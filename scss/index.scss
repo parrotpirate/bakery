@@ -17,3 +17,68 @@ html, body {
 .clearfix {
     clear: both;
 }
+
+#recipes {
+    width: 100%;
+    min-width: 1024px;
+    height: 880px;
+    background: url(../resources/images/food-kitchen-cutting-board-cooking.jpg);
+    background-size: cover;
+    background-position: 0% 50%;
+    padding: 100px;
+
+    .recipe_card {
+        height: 100%;
+        width: 80%;
+        background-color: white;
+        position: relative;
+        box-shadow: 13px 13px 10px black;
+
+        .recipe_image {
+            height: 100%;
+            width: 45%;
+            float: left;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .recipe {
+            height: 70%;
+            width: 55%;
+            float: right;
+            background: url(../resources/images/house_sketch.gif) no-repeat;
+            background-position: 125% 125%;
+            padding: 5%;
+
+            .recipe_title {
+                h3 {
+                    @include title-font;
+                }
+
+                p {
+                    @include nav-font;
+
+                    text-transform: uppercase;
+                    font-weight: 900;
+                }
+            }
+
+            .recipe_summary {
+                p {
+                    @include text-font;
+                }
+            }
+        }
+
+        .recipe_selector {
+            height: 30%;
+            width: 55%;
+            float: right;
+            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../resources/images/canvas.jpg);
+        }
+    }
+}
