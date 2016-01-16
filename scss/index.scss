@@ -25,11 +25,12 @@ html, body {
     background: url(../resources/images/food-kitchen-cutting-board-cooking.jpg);
     background-size: cover;
     background-position: 0% 50%;
-    padding: 100px;
+    padding: 120px;
 
     .recipe_card {
         height: 100%;
         width: 80%;
+        min-width: 900px;
         background-color: white;
         position: relative;
         box-shadow: 13px 13px 10px black;
@@ -51,12 +52,16 @@ html, body {
             width: 55%;
             float: right;
             background: url(../resources/images/house_sketch.gif) no-repeat;
-            background-position: 125% 125%;
+            background-position: 135% 175%;
             padding: 5%;
 
             .recipe_title {
+                width: 100%;
+
                 h3 {
                     @include title-font;
+
+                    font-size: 3.2em;
                 }
 
                 p {
@@ -64,13 +69,27 @@ html, body {
 
                     text-transform: uppercase;
                     font-weight: 900;
+                    color: #b26b3d;
+                    margin-top: 10px;
+                    font-size: 1.2em;
                 }
             }
 
             .recipe_summary {
+                margin-top: 50px;
+
                 p {
                     @include text-font;
+
+                    line-height: 1.4em;
                 }
+            }
+
+            .recipe_rating {
+                color: #D49244;
+                margin-top: 50px;
+                font-size: 1.2em;
+                letter-spacing: .25em;
             }
         }
 
@@ -78,7 +97,88 @@ html, body {
             height: 30%;
             width: 55%;
             float: right;
+            position: relative;
             background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../resources/images/canvas.jpg);
+
+            .fa {
+                font-size: 2em;
+                color: fade-out(#B19981, 0.5);
+                transition: all .3s ease-in-out;
+
+                &.fa-angle-left {
+                    margin-right: 4px;
+                }
+
+                &.fa-angle-right {
+                    margin-left: 4px;
+                }
+            }
+
+            .selector {
+                border: 3px solid fade-out(#B19981, 0.5);
+                display: inline-block;
+                padding: 5px 12px;
+                border-radius: 100%;
+                text-align: center;
+                transition: all 0.3s ease-in-out;
+                position: absolute;
+                width: 45px;
+                height: 48px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+
+                &:hover {
+                    border-color: darken(#B19981, 20%);
+                    cursor: pointer;
+                }
+
+                &:active {
+                    transform: scale(1.1);
+                    transition: none;
+                }
+
+                &:hover > .fa {
+                    color: darken(#B19981, 20%);
+                }
+
+                &:active > .fa {
+                    transform: scale(1.1);
+                    transition: none;
+                }
+
+                &.left {
+                    left: 5%;
+                }
+
+                &.right {
+                    right: 5%;
+                }
+            }
+
+            .selector_window {
+                width: 65%;
+                height: 100%;
+                margin: 0 auto;
+                overflow: hidden;
+
+                .selector_img {
+                    width: 100 / 3 * 0.97%;
+                    height: 100%;
+                    display: inline-block;
+                    text-align: center;
+                    transition: all 0.3s ease-in-out;
+
+                    img {
+                        width: 90%;
+                        border: 5px solid white;
+                        border-radius: 100%;
+                        object-fit: cover;
+
+                        @include vertical-align;
+                    }
+                }
+            }
         }
     }
 }
