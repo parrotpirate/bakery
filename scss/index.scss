@@ -28,6 +28,7 @@ html, body {
     padding: 120px;
 
     .recipe_card {
+        /* Floating card for recipe image, text, and carousel */
         height: 100%;
         width: 80%;
         min-width: 900px;
@@ -48,6 +49,7 @@ html, body {
         }
 
         .recipe {
+            /* Recipe text styling */
             height: 70%;
             width: 55%;
             float: right;
@@ -75,6 +77,8 @@ html, body {
                 }
             }
 
+            /* End .recipe_title */
+
             .recipe_summary {
                 margin-top: 50px;
 
@@ -93,7 +97,10 @@ html, body {
             }
         }
 
+        /* End .recipe */
+
         .recipe_selector {
+            /* Frame for carousel and navigational arrows */
             height: 30%;
             width: 55%;
             float: right;
@@ -101,6 +108,7 @@ html, body {
             background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../resources/images/canvas.jpg);
 
             .fa {
+                /* Navigational arrow styling */
                 font-size: 2em;
                 color: fade-out(#B19981, 0.5);
                 transition: all .3s ease-in-out;
@@ -114,7 +122,10 @@ html, body {
                 }
             }
 
+            /* End .fa */
+
             .selector {
+                /* Navigational arrow border/container */
                 border: 3px solid fade-out(#B19981, 0.5);
                 display: inline-block;
                 padding: 5px 12px;
@@ -156,29 +167,62 @@ html, body {
                 }
             }
 
+            /* End .selector */
+
             .selector_window {
+                /* Frame for carousel */
                 width: 65%;
                 height: 100%;
                 margin: 0 auto;
                 overflow: hidden;
 
+                .slick-list {
+                    /* Vertical center carousel */
+                    @include vertical-align;
+
+                    .slick-slide {
+                        /* Remove blue border on click */
+                        outline: none;
+                    }
+                }
+
                 .selector_img {
+                    /* Frame for carousel images */
                     width: 100 / 3 * 0.97%;
                     height: 100%;
                     display: inline-block;
                     text-align: center;
                     transition: all 0.3s ease-in-out;
 
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    &:active > img {
+                        border-width: 0;
+                        transition: none;
+                    }
+
                     img {
+                        /* Individual carousel images */
                         width: 90%;
                         border: 5px solid white;
                         border-radius: 100%;
+                        transition: 0.3s all ease-in-out;
                         object-fit: cover;
-
-                        @include vertical-align;
                     }
                 }
+
+                /* End .selector_img */
             }
+
+            /* End .selector_window */
         }
+
+        /* End .recipe_selector */
     }
+
+    /* End .recipe_card */
 }
+
+/* End #recipes */
