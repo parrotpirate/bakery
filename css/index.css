@@ -421,3 +421,217 @@ html, body {
 .clearfix {
   clear: both;
 }
+
+#recipes {
+  width: 100%;
+  min-width: 1024px;
+  height: 880px;
+  background: url(../resources/images/food-kitchen-cutting-board-cooking.jpg);
+  background-size: cover;
+  background-position: 0% 50%;
+  padding: 120px;
+  /* End .recipe_card */
+}
+
+#recipes .recipe_card {
+  /* Floating card for recipe image, text, and carousel */
+  height: 100%;
+  width: 80%;
+  min-width: 900px;
+  background-color: white;
+  position: relative;
+  box-shadow: 13px 13px 10px black;
+  /* End .recipe */
+  /* End .recipe_selector */
+}
+
+#recipes .recipe_card .recipe_image {
+  height: 100%;
+  width: 45%;
+  float: left;
+}
+
+#recipes .recipe_card .recipe_image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#recipes .recipe_card .recipe {
+  /* Recipe text styling */
+  height: 70%;
+  width: 55%;
+  float: right;
+  background: url(../resources/images/house_sketch.gif) no-repeat;
+  background-position: 135% 175%;
+  padding: 5%;
+  /* End .recipe_title */
+}
+
+#recipes .recipe_card .recipe .recipe_title {
+  width: 100%;
+}
+
+#recipes .recipe_card .recipe .recipe_title h3 {
+  font-family: 'Yeseva One', cursive;
+  font-size: 3.2em;
+}
+
+#recipes .recipe_card .recipe .recipe_title p {
+  font-family: 'Merriweather', serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #b26b3d;
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+#recipes .recipe_card .recipe .recipe_summary {
+  margin-top: 50px;
+}
+
+#recipes .recipe_card .recipe .recipe_summary p {
+  font-family: 'Mandali', sans-serif;
+  line-height: 1.4em;
+}
+
+#recipes .recipe_card .recipe .recipe_rating {
+  color: #D49244;
+  margin-top: 50px;
+  font-size: 1.2em;
+  letter-spacing: .25em;
+}
+
+#recipes .recipe_card .recipe_selector {
+  /* Frame for carousel and navigational arrows */
+  height: 30%;
+  width: 55%;
+  float: right;
+  position: relative;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../resources/images/canvas.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../resources/images/canvas.jpg);
+  /* End .fa */
+  /* End .selector */
+  /* End .selector_window */
+}
+
+#recipes .recipe_card .recipe_selector .fa {
+  /* Navigational arrow styling */
+  font-size: 2em;
+  color: rgba(177, 153, 129, 0.5);
+  -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+
+#recipes .recipe_card .recipe_selector .fa.fa-angle-left {
+  margin-right: 4px;
+}
+
+#recipes .recipe_card .recipe_selector .fa.fa-angle-right {
+  margin-left: 4px;
+}
+
+#recipes .recipe_card .recipe_selector .selector {
+  /* Navigational arrow border/container */
+  border: 3px solid rgba(177, 153, 129, 0.5);
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 100%;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+  position: absolute;
+  width: 45px;
+  height: 48px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+#recipes .recipe_card .recipe_selector .selector:hover {
+  border-color: #7e664e;
+  cursor: pointer;
+}
+
+#recipes .recipe_card .recipe_selector .selector:active {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: none;
+          transition: none;
+}
+
+#recipes .recipe_card .recipe_selector .selector:hover > .fa {
+  color: #7e664e;
+}
+
+#recipes .recipe_card .recipe_selector .selector:active > .fa {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: none;
+          transition: none;
+}
+
+#recipes .recipe_card .recipe_selector .selector.left {
+  left: 5%;
+}
+
+#recipes .recipe_card .recipe_selector .selector.right {
+  right: 5%;
+}
+
+#recipes .recipe_card .recipe_selector .selector_window {
+  /* Frame for carousel */
+  width: 65%;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  /* End .selector_img */
+}
+
+#recipes .recipe_card .recipe_selector .selector_window .slick-list {
+  /* Vertical center carousel */
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#recipes .recipe_card .recipe_selector .selector_window .slick-list .slick-slide {
+  /* Remove blue border on click */
+  outline: none;
+}
+
+#recipes .recipe_card .recipe_selector .selector_window .selector_img {
+  /* Frame for carousel images */
+  width: 32.33333%;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+
+#recipes .recipe_card .recipe_selector .selector_window .selector_img:hover {
+  cursor: pointer;
+}
+
+#recipes .recipe_card .recipe_selector .selector_window .selector_img:active > img {
+  border-width: 0;
+  -webkit-transition: none;
+          transition: none;
+}
+
+#recipes .recipe_card .recipe_selector .selector_window .selector_img img {
+  /* Individual carousel images */
+  width: 90%;
+  border: 5px solid white;
+  border-radius: 100%;
+  -webkit-transition: 0.3s all ease-in-out;
+          transition: 0.3s all ease-in-out;
+  object-fit: cover;
+}
+
+/* End #recipes */
