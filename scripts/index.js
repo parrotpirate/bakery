@@ -27,9 +27,7 @@ jQuery(document).ready(function($) {
 		touchMove: false
 	});
 
-	$('.selector_img').click(function(e) {
-		e.preventDefault();
-	});
+	
 
 
 });
